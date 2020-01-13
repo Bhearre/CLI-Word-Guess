@@ -43,12 +43,11 @@ function gameLogic() {
     }
 
 
-    // Create a wordComplete array to test
+    // Create a wordComplete array to test and see if user gets it right
     var wordComplete = [];
 
     selectedWord.objArray.forEach(completeCheck);
-    console.log("completeCheck has just finished iterating here " + wordComplete);
-    // console.log("completCheck is running");
+    // console.log("completeCheck has just finished iterating here " + wordComplete);
     
     // letters remaining to be guessed
     if (wordComplete.includes(false)) {
@@ -125,11 +124,11 @@ function gameLogic() {
         restartGame();
     }
 
-   
+//    completeCheck checks the keys pushes them to the wordComplete array
     function completeCheck(key) {
-        console.log( "We are in complete check and key is " + key);
+        // console.log( "We are in complete check and key is " + key);
         wordComplete.push(key.guessed);
-        console.log("Key guessed is " + key.guessed + " this added to: "+ wordComplete);
+        // console.log("Key guessed is " + key.guessed + " this added to: "+ wordComplete);
     }
 
 }
